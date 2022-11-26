@@ -26,7 +26,7 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001548763346, -1001515590697, -1001511629430, -1001562323229, -1001157941824, -1001510203790, -1001501243958, -1001580679295, -1001554735797, -1001512849718, -1001592057255, -1001490893135, -1001522595979, -1001513015963, -1001327911524, -1001517152612, -1001591057296, -1001563481034, -1001526514350, -1001495495666, -1001500007497, -1001234165493, -1001524812805, -1001170184644, -1001152844738, -1001519731058, -1001575526445, -1001467196699, -1001599194362, -1001658353601, -1001533767277, -1001544396963, -1001619073454, -1001568594521, -1001581241095').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '-1001593272391')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001415345069')
 auth_grp = environ.get('AUTH_GROUP', '')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
@@ -37,7 +37,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001593272391'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'MovieClubFamily_Chat')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
